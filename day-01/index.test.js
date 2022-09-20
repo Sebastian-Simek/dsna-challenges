@@ -1,4 +1,4 @@
-const { reverseSentence, addCapitalToWords } = require('./index');
+const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst } = require('./index');
 
 
 describe('primitive code challenges', () => {
@@ -12,4 +12,20 @@ describe('primitive code challenges', () => {
       expect(addCapitalToWords('alchemy ROCKS goLD')).toBe('Alchemy Rocks Gold');
     });
   });
+  describe('Determins if its odd or even', () => {
+    it('determins its odness', () => {
+      expect(oddOrEven(121)).toBe('Evenish');
+    });
+  });
+  describe('extra function', () => {
+    it('adds punctionation', () => {
+      expect(addPunctuation('!!!')('hello world')).toEqual('hello world!!!');
+    });
+  });
+  describe('another function', () => {
+    it('adds arrays stuff', () => {
+      expect(addFirst('orange')(['red', 'blue', 'green'])).toEqual(['orange', 'red', 'blue', 'green']);
+    });
+  });
+  
 });
