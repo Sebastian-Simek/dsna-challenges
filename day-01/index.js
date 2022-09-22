@@ -28,6 +28,13 @@ function oddOrEven(num) {
   % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
+function isAnagram(input1, input2) {
+  const array1 = input1.split('').sort().join('');
+  const array2 = input2.split('').sort().join('');
+  
+  return array1 === array2 ? true : false; 
+}
+
 
 
 function addPunctuation (str) {
@@ -47,4 +54,4 @@ function addFirst (str) {
 
 
 
-module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex };
+module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram };

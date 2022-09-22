@@ -1,4 +1,4 @@
-const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex } = require('./index');
+const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram } = require('./index');
 
 
 describe('primitive code challenges', () => {
@@ -32,6 +32,12 @@ describe('primitive code challenges', () => {
       expect(atIndex(['a', 'b', 'c', 'd', 'e'], 1)).toEqual('b');
       expect(atIndex(['a', 'b', 'c', 'd', 'e'], -2)).toEqual('d');
     });
-  })
+  });
+  describe('prim4', () => {
+    it('returns true or false if anagram', () => {
+      expect(isAnagram('superintended', 'unpredestined')).toEqual(true);
+      expect(isAnagram('pictorialness', 'documentarily')).toEqual(false);
+    });
+  });
   
 });
