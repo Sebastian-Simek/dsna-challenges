@@ -13,6 +13,10 @@ function addCapitalToWords(str) {
     .join(' ');
 }
 
+function atIndex(arr, index) {
+  return index < 0 ? arr[arr.length + index] : arr[index];
+}
+
 function oddOrEven(num) {
   return num 
     .toString()
@@ -23,6 +27,8 @@ function oddOrEven(num) {
     }, 0)
   % 2 === 0 ? 'Evenish' : 'Oddish';
 }
+
+
 
 function addPunctuation (str) {
   return function addSomething(string) {
@@ -41,4 +47,4 @@ function addFirst (str) {
 
 
 
-module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst };
+module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex };

@@ -1,4 +1,4 @@
-const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst } = require('./index');
+const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex } = require('./index');
 
 
 describe('primitive code challenges', () => {
@@ -27,5 +27,11 @@ describe('primitive code challenges', () => {
       expect(addFirst('orange')(['red', 'blue', 'green'])).toEqual(['orange', 'red', 'blue', 'green']);
     });
   });
+  describe('Prim3', () => {
+    it('takes an array and an index and returns the item at corresponding index', () => {
+      expect(atIndex(['a', 'b', 'c', 'd', 'e'], 1)).toEqual('b');
+      expect(atIndex(['a', 'b', 'c', 'd', 'e'], -2)).toEqual('d');
+    });
+  })
   
 });
