@@ -35,6 +35,7 @@ function isAnagram(input1, input2) {
   return array1 === array2 ? true : false; 
 }
 
+
 function fizzBuzz(num) {
   const arrayToCheck = [];
   for (let i = 1; i <= num; i++) {
@@ -50,6 +51,8 @@ function fizzBuzz(num) {
   }
   return arrayToCheck;
 }
+
+
 
 
 
@@ -70,4 +73,4 @@ function addFirst (str) {
 
 
 
-module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram, fizzBuzz };
+module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram };
