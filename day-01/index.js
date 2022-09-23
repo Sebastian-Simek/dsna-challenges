@@ -54,4 +54,4 @@ function addFirst (str) {
 
 
 
-module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram, fizzBuzz };
+module.exports = { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram };
