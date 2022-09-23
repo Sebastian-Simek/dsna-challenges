@@ -1,4 +1,4 @@
-const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram, fizzBuzz } = require('./index');
+const { reverseSentence, addCapitalToWords, oddOrEven, addPunctuation, addFirst, atIndex, isAnagram } = require('./index');
 
 
 describe('primitive code challenges', () => {
@@ -39,15 +39,15 @@ describe('primitive code challenges', () => {
       expect(isAnagram('pictorialness', 'documentarily')).toEqual(false);
     });
   });
-  describe('prim5', () => {
-    it('fizzbuzz', () => {
-      expect(fizzBuzz(16)).toEqual([
-        1, 2, 'Fizz', 4, 'Buzz', 
-        'Fizz', 7, 8, 'Fizz', 'Buzz', 
-        11, 'Fizz', 13, 14, 'FizzBuzz', 
-        16
-      ]);
-    });
-  });
+  // describe('prim5', () => {
+  //   it('fizzbuzz', () => {
+  //     expect(fizzBuzz(16)).toEqual([
+  //       1, 2, 'Fizz', 4, 'Buzz', 
+  //       'Fizz', 7, 8, 'Fizz', 'Buzz', 
+  //       11, 'Fizz', 13, 14, 'FizzBuzz', 
+  //       16
+  //     ]);
+  //   });
+  // });
   
 });
