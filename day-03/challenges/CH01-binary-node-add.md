@@ -15,8 +15,10 @@ class BinaryTreeNode {
 
   add(node) {
     // Implement me!
+    
   }
 }
+
 ```
 
 Keep in mind this is a recursive operation.
