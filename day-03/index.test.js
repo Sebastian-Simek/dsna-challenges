@@ -1,10 +1,11 @@
 const { BinaryTreeNode } = require('./BinaryTreeNode');
+const PersonTreeNode = require('./PersonTreeNode');
 
 describe('node based data structures', () => {
   it('example test', () => {
     expect(1).toBe(1);
   });
-  it.only('creates a new tree?', () => {
+  it('creates a new tree?', () => {
     const B = new BinaryTreeNode('B');
     const A = new BinaryTreeNode('A');
     const C = new BinaryTreeNode('C');
@@ -21,8 +22,54 @@ describe('node based data structures', () => {
     expect(B.right.right.value).toEqual('D');
 
   });
+
+  it.only('creates a person tree', () => {
+    const Austin = new PersonTreeNode({
+      name: 'Austin',
+      city: 'Portland',
+      state: 'Oregon'
+    });
+    const Colter = new PersonTreeNode({
+      name: 'Colter',
+      city: 'Corvallis',
+      state: 'Oregon'
+    });
+    const Mariah = new PersonTreeNode({
+      name: 'Mariah',
+      city: 'Sherwood',
+      state: 'Oregon'
+    });
+    const Aaron = new PersonTreeNode({
+      name: 'Aaron',
+      city: 'Austin',
+      state: 'Texas'
+    });
+    const Jenna = new PersonTreeNode({
+      name: 'Jenna',
+      city: 'Portland',
+      state: 'Oregon'
+    });
+
+    Austin.add(Colter);
+    Austin.add(Mariah);
+    Austin.add(Aaron);
+    Austin.add(Jenna);
+    expect(Austin.value).toEqual('Austin');
+    expect(Austin.left.value).toEqual('Aaron');
+    expect(Austin.right.value).toEqual('Colter');
+    expect(Austin.right.right.value).toEqual('Mariah');
+    expect(Austin.right.left).toEqual(null);
+    expect(Austin.right.right.left.value).toEqual('Jenna');
+
+
+    const person = Austin.findPerson('bob');
+    console.log('person', person);
+  });
+
+  it('finds by name', () => {
+
+  });
 });
 
 
 
-const bigObject = { 'left': { 'left': { 'left': null, 'right': null, 'value': 'D' }, 'right': null, 'value': 'C' }, 'right': { 'left': null, 'right': null, 'value': 'A' }, 'value': 'B' };
