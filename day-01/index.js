@@ -36,6 +36,25 @@ function isAnagram(input1, input2) {
 }
 
 
+function fizzBuzz(num) {
+  const arrayToCheck = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      arrayToCheck.push('FizzBuzz');
+    } else if (i % 5 === 0) {
+      arrayToCheck.push('Buzz');
+    } else if (i % 3 === 0) {
+      arrayToCheck.push('Fizz');
+    } else {
+      arrayToCheck.push(i);
+    }
+  }
+  return arrayToCheck;
+}
+
+
+
+
 
 function addPunctuation (str) {
   return function addSomething(string) {
