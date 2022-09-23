@@ -61,14 +61,19 @@ describe('node based data structures', () => {
     expect(Austin.right.left).toEqual(null);
     expect(Austin.right.right.left.value).toEqual('Jenna');
 
-
-    const person = Austin.findPerson('bob');
-    console.log('person', person);
+    expect(Austin.findPerson('Jenna')).toEqual({
+      name: 'Jenna',
+      city: 'Portland',
+      state: 'Oregon'
+    });
+    expect(Austin.findPerson('Aaron')).toEqual({
+      name: 'Aaron',
+      city: 'Austin',
+      state: 'Texas'
+    });
+    expect(Austin.findPerson('Bob')).toEqual(null);
   });
 
-  it('finds by name', () => {
-
-  });
 });
 
 
