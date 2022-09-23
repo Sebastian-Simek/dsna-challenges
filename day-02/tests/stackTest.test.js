@@ -1,4 +1,4 @@
-const { Stack } = require('../Stack');
+const { Stack, reverse } = require('../Stack');
 
 describe('Stack Tests', () => {
   it('should add an item to an array', () => {
@@ -16,5 +16,11 @@ describe('Stack Tests', () => {
   it('peek should return the last item in the array', () => {
     const peekedItem = new Stack(['fox', 'goose', 'lizard']);
     expect(peekedItem.classPeek()).toEqual('lizard');
-  });    
+  }); 
+});
+describe('CHO4', () => {
+  it('should reverse an array', () => {
+    expect(reverse([12, 3, 5, 7])).toEqual([7, 5, 3, 12]);
+
+  });
 });

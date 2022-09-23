@@ -11,7 +11,7 @@ class Stack {
   }
 
   classPop() {
-    this.#list.pop();
+    return this.#list.pop();
   }
 
   classPeek() {
@@ -24,4 +24,24 @@ class Stack {
 
 }
 
-module.exports = { Stack };
+function reverse (arr) {
+  const resultsArray = [];
+  const stackArray = new Stack();
+  for (let i = 0; i < arr.length; i++) {
+    stackArray.classPush(arr[i]);
+  } 
+  let item;
+  // eslint-disable-next-line no-cond-assign
+  while (item = stackArray.classPop()) {
+    resultsArray.push(item);
+  }
+  return resultsArray;
+
+  
+
+}
+
+ 
+
+
+module.exports = { Stack, reverse };
